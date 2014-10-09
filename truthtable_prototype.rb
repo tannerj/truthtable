@@ -31,15 +31,15 @@ class TruthTable
   attr_reader  :premises
 
   def initialize(p, q, r)
-    @premises = Array.new 
+    @premises = Array.new
     premise_p = Premise.new(p)
-	  premise_p.position = 1
-	  premise_q = Premise.new(q)
-	  premise_q.position = 2
-	  premise_r = Premise.new(r)
-	  premise_r.position = 3
-	  @premises.push premise_p
-	  @premises.push premise_q
+    premise_p.position = 1
+    premise_q = Premise.new(q)
+    premise_q.position = 2
+    premise_r = Premise.new(r)
+    premise_r.position = 3
+    @premises.push premise_p
+    @premises.push premise_q
     @premises.push premise_r
   end
   
@@ -49,15 +49,15 @@ class TruthTable
 
   def generate_underline
     @premises.length.times { print '------' }
-	  puts "-\n" 
+    puts "-\n" 
   end
 
   def generate_headers
     @premises.each do |premise|
       print "|  #{premise.symbol}  " 
-	  end
-	  puts '|'
-	  generate_underline
+    end
+    puts '|'
+    generate_underline
   end
   
   def generate_rows
@@ -65,18 +65,18 @@ class TruthTable
       @premises.each do |premise|
         if premise.truth?(iteration)
           print '|  1  '
-	      else 
+        else 
           print '|  0  '
-	      end
-	    end
-	    puts '|'
+        end
+      end
+      puts '|'
       generate_underline
     end
   end
   
   def draw
     generate_headers 
-	  generate_rows
+    generate_rows
   end
 end
 
