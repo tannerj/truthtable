@@ -6,8 +6,8 @@ require 'optparse'
 class Premise
   attr_accessor :symbol, :position
   @position
-  def initialize(proposition_symbol)
-    @symbol = proposition_symbol  
+  def initialize(premise_symbol)
+    @symbol = premise_symbol  
   end
 
   def calc_interval
