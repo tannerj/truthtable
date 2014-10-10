@@ -1,5 +1,4 @@
 #! /usr/bin/env ruby
-require 'optparse'
 
 ##
 # A premise used in truth tables
