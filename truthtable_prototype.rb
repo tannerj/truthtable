@@ -37,7 +37,7 @@ class Premise
 end
 
 ##
-# Given a set of premises, creates a truth table
+# Given a number of premises to use, creates a truth table
 class TruthTable
   attr_reader  :premises
   def initialize(premise_count)
@@ -45,7 +45,7 @@ class TruthTable
     @premises = Array.new
     premise_count.times do |number|
       premise = Premise.new(@premise_symbols[number])
-      premise.position = number + 1
+      premise.position = number + 1 # to convert from array(zero based), we add one.
       @premises.push premise
     end
   end
