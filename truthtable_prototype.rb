@@ -40,18 +40,14 @@ end
 # Given a set of premises, creates a truth table
 class TruthTable
   attr_reader  :premises
-
-  def initialize(p, q, r)
+  def initialize(premise_count)
+    @premise_symbols = %w[p q r s t u v w x y z]
     @premises = Array.new
-    premise_p = Premise.new(p)
-    premise_p.position = 1
-    premise_q = Premise.new(q)
-    premise_q.position = 2
-    premise_r = Premise.new(r)
-    premise_r.position = 3
-    @premises.push premise_p
-    @premises.push premise_q
-    @premises.push premise_r
+    premise_count.times do |number|
+      premise = Premise.new(@premise_symbols[number])
+      premise.position = number + 1
+      @premises.push premise
+    end
   end
   
   ##
@@ -108,5 +104,5 @@ class TruthTable
   end
 end
 
-tt = TruthTable.new("p", "q", "r")
+tt = TruthTable.new(3)
 tt.draw
