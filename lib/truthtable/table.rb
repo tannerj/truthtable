@@ -1,5 +1,4 @@
-#! /usr/bin/env ruby
-require_relative 'premise'
+require 'truthtable/premise'
 
 module TruthTable
   class Table

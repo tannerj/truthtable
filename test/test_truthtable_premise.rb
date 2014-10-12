@@ -3,7 +3,7 @@ require_relative '../lib/truthtable/premise'
 
 class TestPremise < MiniTest::Test
   def setup
-    @premise = Premise.new("p") 
+    @premise = TruthTable::Premise.new("p") 
     @premise.position = 1
   end
 
