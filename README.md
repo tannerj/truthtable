@@ -5,4 +5,4 @@ propositions and constructs a truth table for them.
 
 ##Example:
 
-truthtable "p,q,r,s"
+truthtable (~p | q) & (~p | r)
