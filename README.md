@@ -6,3 +6,4 @@ propositions and constructs a truth table for them.
 ##Example:
 
 truthtable (~p | q) & (~p | r)
+
